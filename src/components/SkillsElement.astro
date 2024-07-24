@@ -1,0 +1,27 @@
+---
+const {skill} = Astro.props
+const {skill_name, skill_image } = skill
+---
+
+<div class="skills__box group">
+    <img src={skill_image} alt={skill_name} class="skills__img" width="35" height="35">
+    <span class="text-xs text-gray-400 group-hover:text-black transition-colors">{skill_name}</span>
+</div>
+
+<style>
+    .skills__img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: .5rem;
+    }
+    .skills__box {
+        display: grid;
+        place-items: center;
+        transition: transform  .4s;
+    }
+    .skills__box:hover {
+        transform: translateY(-.25rem) scale(1.2);
+    }
+
+
+</style>

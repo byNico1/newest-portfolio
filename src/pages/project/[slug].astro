@@ -1,0 +1,37 @@
+---
+import projects from 'src/lib/projects';
+import type { Project } from 'src/lib/projects';
+
+import ProjectLayout from '@layouts/ProjectLayout.astro';
+
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug.current },
+    props: { project },
+  }));
+}
+export interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<ProjectLayout
+  title={project.name}
+  description={project.description}
+  heroImage={project.poster}
+  githubUrl={project.githuburl}
+  projectUrl={project.projecturl}
+>
+
+<p>
+    {project.description}
+</p>
+
+<ul>
+    {project.content.map(item => (
+        <li>{item}</li>
+    ))}
+</ul>
+</ProjectLayout>

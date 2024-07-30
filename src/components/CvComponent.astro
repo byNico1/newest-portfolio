@@ -2,6 +2,7 @@
 import TimeLineElement from "./cv/TimeLine.astro";
 import skills from "src/lib/skills";
 import SkillsElement from "./SkillsElement.astro";
+import projects from "src/lib/projects";
 ---
 
 <div class="my-5">
@@ -27,65 +28,18 @@ import SkillsElement from "./SkillsElement.astro";
   </div>
 
   <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Promptopia"
-      subtitle="2024"
-    >
-    <ul class="list-disc list-inside mb-5">
-      <li>Technologies used: JavaScript, Next.js, MongoDB, Mongoose, Tailwind</li>
-      <li>Enabled users to Sign In, post, and categorize ChatGpt prompts like a social media</li>
-    </ul>
-  </TimeLineElement>
-  <TimeLineElement
-  title="CV Maker App"
-  subtitle="2024"
-  >
-   <ul class="list-disc list-inside mb-5">
-    <li>Technologies used: Typescript, React.js, Tailwind</li>
-    <li>Helps you generate and download your resume fast</li>
-  </ul>
-</TimeLineElement>
-<TimeLineElement
-title="Battleship"
-subtitle="2024"
->
-<ul class="list-disc list-inside mb-5">
- <li>Technologies used: React, JavaScript, Tailwind</li>
- <li>Battleship basic game</li>
-</ul>
-</TimeLineElement>
-<TimeLineElement
-title="Amazon Affiliate Website"
-subtitle="2024"
->
-<ul class="list-disc list-inside mb-5">
- <li>Technologies used: Astro, JavaScript, Mdx, Typescript</li>
- <li>SEO-optimized website with AI to reach more people and make revenue with the Amazon Affiliate Program</li>
-</ul>
+    {projects.map(project => (
+      <TimeLineElement
+        title={project.name}
+        subtitle={project.date}
+      >
+      <ul class="list-disc list-inside mb-5">
+        {project.content.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Codecademy"
-      subtitle="20219 to 2021, Remote"
-    />
-    <TimeLineElement
-      title="Platzi"
-      subtitle="2021 to 2022, Remote"
-    />
-    <TimeLineElement
-      title="HarvardX"
-      subtitle="2023 to 2024, Remote"
-    />
-    <TimeLineElement
-      title="The Odin Project"
-      subtitle="2024 to Present, Remote"
-    />
+    ))}
   </div>
 
 

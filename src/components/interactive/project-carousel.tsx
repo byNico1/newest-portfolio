@@ -286,7 +286,7 @@ function ProjectCarousel({ projects }: ProjectCarouselProps) {
             disabled={currentSlide === 0}
             className="pointer-events-auto aspect-square h-fit rounded-full border border-neutrals-600  bg-neutrals-900/90 p-4 text-neutrals-100 drop-shadow-md backdrop-blur-md disabled:cursor-not-allowed disabled:opacity-50 supports-[backdrop-filter]:bg-neutrals-900/50"
           >
-            <Icons.ChevronLeft className="size-5" />
+            <Icons.ChevronLeft className="size-5 w-5 h-5" />
           </button>
           <button
             type="button"
@@ -296,7 +296,7 @@ function ProjectCarousel({ projects }: ProjectCarouselProps) {
             disabled={currentSlide === projects.length - 1}
             className="pointer-events-auto aspect-square h-fit rounded-full border border-neutrals-600 bg-neutrals-900/90 p-4 text-neutrals-100 drop-shadow-md backdrop-blur-md disabled:cursor-not-allowed disabled:opacity-50 supports-[backdrop-filter]:bg-neutrals-900/50"
           >
-            <Icons.ChevronRight className="size-5" />
+            <Icons.ChevronRight className="size-5 w-5 h-5" />
           </button>
         </div>
         <div className="h-[calc(clamp(18rem,42vmin,26rem)*3/2)] touch-none select-none overflow-hidden">

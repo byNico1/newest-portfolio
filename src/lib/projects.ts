@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     _id: "cvapp",
-    name: "CV App",
+    name: "CV Maker App",
     description:
       "A React.js and TypeScript-based web application that enables users to create and download resumes quickly and effortlessly.",
     poster: "/cv_app.png",
@@ -53,7 +53,7 @@ const projects: Project[] = [
     description:
       "A React.js-powered website recreating the classic memory card game fetching the pokeApi, providing an interactive and engaging user experience.",
     poster: "/memory-game.png",
-    slug: { _type: "slug", current: "cv-app" },
+    slug: { _type: "slug", current: "memory-game" },
     date: "2024-05-15",
     tags: ["React"],
     githuburl: "https://github.com/byNico1/memory-card",

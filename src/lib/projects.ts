@@ -14,6 +14,39 @@ interface Project {
 
 const projects: Project[] = [
   {
+    _id: "todoappauth",
+    name: "Todo App with authentication",
+    description:
+      "A Express.js and React Full-Stack App that let users create accounts and manage tasks and process of each one.",
+    poster: "/todoappauth.png",
+    slug: { _type: "slug", current: "todo-app-with-authentication" },
+    date: "2024-06-10",
+    tags: ["JavaScript", "Express.js", "PostgresSQL"],
+    githuburl: "https://github.com/byNico1/todo-app-auth",
+    // projecturl: "",
+    content: [
+      "Technologies used: JavaScript, Express.js, PostgresSQL, JWT",
+      "Full-Stack App with authentication, users can create accounts and manage tasks",
+    ],
+  },
+  {
+    _id: "adstrategic",
+    name: "Adstrategic",
+    description:
+      "A Next.js multilingual app built in Typescript integrated with resend (make e-mail submitting easier), Strapi headless cms as back-end for the blog posts.",
+    poster: "/adstrategic.png",
+    slug: { _type: "slug", current: "adstrategic" },
+    date: "2024-09-10",
+    tags: ["Next.js", "Strapi", "Typescript"],
+    githuburl: "https://github.com/byNico1/adstrategic",
+    projecturl: "https://adstrategic.org/",
+    badge: "NEW",
+    content: [
+      "Technologies used: Typescript, Next.js, Strapi headless CMS, Resend, Tailwind",
+      "My agency multilingual website, with a blog and a contact form for people to reach us",
+    ],
+  },
+  {
     _id: "promptopia",
     name: "Promptopia",
     description:
